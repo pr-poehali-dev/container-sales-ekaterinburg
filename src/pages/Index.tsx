@@ -34,7 +34,7 @@ const stats = [
   { value: "12+", label: "лет на рынке" },
   { value: "200+", label: "контейнеров в наличии" },
   { value: "3", label: "терминала в Екатеринбурге" },
-  { value: "2 000+", label: "довольных клиентов" },
+  { value: "900+", label: "довольных клиентов" },
 ];
 
 const navLinks = [
@@ -181,7 +181,7 @@ export default function Index() {
                   "Собственные терминалы в 3 районах Екатеринбурга",
                   "Доставка собственным транспортом",
                   "Полный пакет документов",
-                  "Гарантия на все контейнеры",
+
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-[#555]">
                     <span className="w-1.5 h-1.5 bg-[#4f6a96] rounded-full shrink-0" />
@@ -204,7 +204,7 @@ export default function Index() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white border border-[#e5e5e5] p-6">
-                  <div className="text-4xl font-black mb-2">2 000+</div>
+                  <div className="text-4xl font-black mb-2">900+</div>
                   <div className="text-sm text-[#888]">Довольных клиентов</div>
                 </div>
                 <div className="bg-[#f0f0ee] border border-[#e5e5e5] p-6">
