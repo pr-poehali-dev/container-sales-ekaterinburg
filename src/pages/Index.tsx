@@ -56,7 +56,7 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#f7f7f5]/95 backdrop-blur-sm border-b border-[#e5e5e5]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#home" className="flex items-center">
-            <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Лидер-контейнер" className="h-10 w-auto object-contain" />
+            <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Контейнер 96" className="h-10 w-auto object-contain" />
           </a>
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
@@ -171,7 +171,7 @@ export default function Index() {
                 решений
               </h2>
               <p className="text-[#555] leading-relaxed mb-6">
-                Лидер-контейнер — ведущий поставщик морских контейнеров в Екатеринбурге. Мы работаем с промышленными предприятиями, строительными компаниями и частными покупателями.
+                Контейнер 96 — ведущий поставщик морских контейнеров в Екатеринбурге. Мы работаем с промышленными предприятиями, строительными компаниями и частными покупателями.
               </p>
               <p className="text-[#555] leading-relaxed mb-8">
                 Все контейнеры проходят проверку качества и имеют паспорт. Гарантируем юридически чистую сделку и полный пакет документов.
@@ -287,9 +287,9 @@ export default function Index() {
       <footer className="border-t border-[#e5e5e5] bg-[#f7f7f5]">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#888]">
           <div className="flex items-center">
-            <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Лидер-контейнер" className="h-8 w-auto object-contain" />
+            <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Контейнер 96" className="h-8 w-auto object-contain" />
           </div>
-          <span className="text-[#888]">© 2024 Лидер-контейнер. Екатеринбург</span>
+          <span className="text-[#888]">© 2024 Контейнер 96. Екатеринбург</span>
           <nav className="flex gap-6">
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} className="hover:text-[#4f6a96] transition-colors">
