@@ -58,8 +58,8 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#f7f7f5]/95 backdrop-blur-sm border-b border-[#e5e5e5]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#home" className="text-lg font-bold tracking-tight flex items-center gap-2">
-            <span className="w-7 h-7 bg-[#111] text-white flex items-center justify-center text-xs font-black">КП</span>
-            <span>КонтейнерПро</span>
+            <span className="w-7 h-7 bg-[#111] text-white flex items-center justify-center text-xs font-black">ЛК</span>
+            <span>Лидер-контейнер</span>
           </a>
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
@@ -99,7 +99,7 @@ export default function Index() {
               в наличии
             </h1>
             <p className="text-lg text-[#555] max-w-xl mb-10 leading-relaxed">
-              Продажа и аренда контейнеров 20, 40 и 40 HC футов. Самовывоз со склада или доставка по городу.
+              Продажа контейнеров 20 и 40 футов. Самовывоз со склада или доставка по городу.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#catalog" className="inline-flex items-center gap-2 bg-[#111] text-white px-7 py-3.5 text-sm font-medium hover:bg-[#333] transition-colors">
@@ -334,10 +334,10 @@ export default function Index() {
       <footer className="border-t border-[#e5e5e5] bg-[#f7f7f5]">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#888]">
           <div className="flex items-center gap-2">
-            <span className="w-6 h-6 bg-[#111] text-white flex items-center justify-center text-xs font-black">КП</span>
-            <span className="font-medium text-[#111]">КонтейнерПро</span>
+            <span className="w-6 h-6 bg-[#111] text-white flex items-center justify-center text-xs font-black">ЛК</span>
+            <span className="font-medium text-[#111]">Лидер-контейнер</span>
           </div>
-          <span>© 2024 КонтейнерПро. Екатеринбург</span>
+          <span>© 2024 Лидер-контейнер. Екатеринбург</span>
           <nav className="flex gap-6">
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} className="hover:text-[#111] transition-colors">
