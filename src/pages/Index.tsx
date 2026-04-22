@@ -25,16 +25,15 @@ const containers = [
 ];
 
 const warehouses = [
-  { id: 1, name: "Склад Уралмаш", address: "ул. Машиностроителей, 19", lat: 56.878, lng: 60.623, hours: "Пн–Вс 8:00–20:00" },
-  { id: 2, name: "Склад Химмаш", address: "ул. Новаторов, 5", lat: 56.768, lng: 60.685, hours: "Пн–Пт 9:00–18:00" },
-  { id: 3, name: "Склад Академический", address: "ул. Краснолесья, 143", lat: 56.774, lng: 60.572, hours: "Пн–Вс 8:00–21:00" },
-  { id: 4, name: "Главный офис", address: "ул. Ленина, 50", lat: 56.837, lng: 60.606, hours: "Пн–Пт 9:00–18:00" },
+  { id: 1, name: "Терминал на Монтажников", address: "ул. Монтажников, 19", lat: 56.838, lng: 60.664, hours: "Пн–Вс 8:00–20:00" },
+  { id: 2, name: "Терминал на Автомагистральной", address: "ул. Автомагистральная, 44", lat: 56.791, lng: 60.573, hours: "Пн–Вс 8:00–20:00" },
+  { id: 3, name: "Терминал на Космонавтов", address: "ул. Космонавтов, 258г", lat: 56.878, lng: 60.623, hours: "Пн–Вс 8:00–20:00" },
 ];
 
 const stats = [
   { value: "12+", label: "лет на рынке" },
-  { value: "500+", label: "контейнеров в наличии" },
-  { value: "4", label: "склада в Екатеринбурге" },
+  { value: "200+", label: "контейнеров в наличии" },
+  { value: "3", label: "терминала в Екатеринбурге" },
   { value: "2 000+", label: "довольных клиентов" },
 ];
 
@@ -48,7 +47,6 @@ const navLinks = [
 export default function Index() {
   const [activeWarehouse, setActiveWarehouse] = useState(warehouses[0]);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
 
   const mapUrl = `https://yandex.ru/map-widget/v1/?ll=${activeWarehouse.lng}%2C${activeWarehouse.lat}&z=15&pt=${activeWarehouse.lng}%2C${activeWarehouse.lat},pm2rdl`;
 
@@ -91,7 +89,7 @@ export default function Index() {
         <div className="flex-1 max-w-6xl mx-auto px-6 flex flex-col justify-center py-24">
           <div className="fade-in">
             <span className="inline-block text-xs tracking-[0.2em] uppercase text-[#888] mb-6 border border-[#ddd] px-3 py-1">
-              Екатеринбург · 4 склада
+              Екатеринбург · 3 терминала
             </span>
             <h1 className="text-5xl md:text-7xl font-black leading-[1.05] tracking-tight mb-8 max-w-3xl">
               Морские<br />
@@ -99,7 +97,7 @@ export default function Index() {
               в наличии
             </h1>
             <p className="text-lg text-[#555] max-w-xl mb-10 leading-relaxed">
-              Продажа контейнеров 20 и 40 футов. Самовывоз со склада или доставка по городу.
+              Продажа контейнеров 20 и 40 футов. Самовывоз с терминала или доставка по городу.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#catalog" className="inline-flex items-center gap-2 bg-[#111] text-white px-7 py-3.5 text-sm font-medium hover:bg-[#333] transition-colors">
@@ -181,7 +179,7 @@ export default function Index() {
               </p>
               <div className="space-y-3">
                 {[
-                  "Собственные склады в 4 районах Екатеринбурга",
+                  "Собственные терминалы в 3 районах Екатеринбурга",
                   "Доставка собственным транспортом",
                   "Полный пакет документов",
                   "Гарантия на все контейнеры",
@@ -201,7 +199,7 @@ export default function Index() {
                   <div className="text-sm text-[#aaa]">Год основания компании</div>
                 </div>
                 <div className="bg-white border border-[#e5e5e5] p-6">
-                  <div className="text-4xl font-black mb-2">500+</div>
+                  <div className="text-4xl font-black mb-2">200+</div>
                   <div className="text-sm text-[#888]">Контейнеров в наличии</div>
                 </div>
               </div>
@@ -211,8 +209,8 @@ export default function Index() {
                   <div className="text-sm text-[#888]">Довольных клиентов</div>
                 </div>
                 <div className="bg-[#f0f0ee] border border-[#e5e5e5] p-6">
-                  <div className="text-4xl font-black mb-2">4</div>
-                  <div className="text-sm text-[#888]">Склада в городе</div>
+                  <div className="text-4xl font-black mb-2">3</div>
+                  <div className="text-sm text-[#888]">Терминала в городе</div>
                 </div>
               </div>
             </div>
@@ -225,7 +223,7 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
             <span className="text-xs tracking-[0.2em] uppercase text-[#888] mb-3 block">Контакты</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Склады и офисы</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Терминалы и контакты</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -270,62 +268,18 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 pt-12 border-t border-[#e5e5e5]">
-            <div>
-              <h3 className="text-2xl font-black mb-3">Оставьте заявку</h3>
-              <p className="text-[#555] text-sm mb-6">Мы свяжемся с вами в течение 30 минут и подготовим коммерческое предложение.</p>
-              <div className="space-y-2 text-sm text-[#555]">
-                <div className="flex items-center gap-2">
-                  <Icon name="Phone" size={14} />
-                  <span>+7 (343) 000-00-00</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Icon name="Mail" size={14} />
-                  <span>info@containerpro.ru</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Icon name="MapPin" size={14} />
-                  <span>Екатеринбург, ул. Ленина, 50</span>
-                </div>
-              </div>
+          <div className="pt-12 border-t border-[#e5e5e5]">
+            <h3 className="text-2xl font-black mb-6">Свяжитесь с нами</h3>
+            <div className="flex flex-col sm:flex-row gap-6">
+              <a href="tel:+79221987474" className="flex items-center gap-3 bg-[#111] text-white px-6 py-4 hover:bg-[#333] transition-colors">
+                <Icon name="Phone" size={18} />
+                <span className="font-medium">+7 (922) 198 74-74</span>
+              </a>
+              <a href="mailto:alanreport@yandex.ru" className="flex items-center gap-3 border border-[#111] text-[#111] px-6 py-4 hover:bg-[#111] hover:text-white transition-colors">
+                <Icon name="Mail" size={18} />
+                <span className="font-medium">alanreport@yandex.ru</span>
+              </a>
             </div>
-
-            <form
-              className="space-y-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
-              }}
-            >
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full border border-[#e5e5e5] bg-[#f7f7f5] px-4 py-3 text-sm outline-none focus:border-[#111] transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="Телефон"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full border border-[#e5e5e5] bg-[#f7f7f5] px-4 py-3 text-sm outline-none focus:border-[#111] transition-colors"
-              />
-              <textarea
-                placeholder="Ваш вопрос или пожелания"
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full border border-[#e5e5e5] bg-[#f7f7f5] px-4 py-3 text-sm outline-none focus:border-[#111] transition-colors resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full bg-[#111] text-white py-3.5 text-sm font-medium hover:bg-[#333] transition-colors"
-              >
-                Отправить заявку
-              </button>
-              <p className="text-xs text-[#aaa] text-center">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-            </form>
           </div>
         </div>
       </section>
