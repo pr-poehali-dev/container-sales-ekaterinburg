@@ -51,7 +51,7 @@ export default function Index() {
   const mapUrl = `https://yandex.ru/map-widget/v1/?ll=${activeWarehouse.lng}%2C${activeWarehouse.lat}&z=15&pt=${activeWarehouse.lng}%2C${activeWarehouse.lat},pm2rdl`;
 
   return (
-    <div className="min-h-screen bg-[#f7f7f5] font-sans text-[#111]">
+    <div className="min-h-screen bg-[#f7f7f5] font-sans text-[#4f6a96]">
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#f7f7f5]/95 backdrop-blur-sm border-b border-[#e5e5e5]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -60,12 +60,12 @@ export default function Index() {
           </a>
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="text-sm text-[#555] hover:text-[#111] transition-colors">
+              <a key={l.href} href={l.href} className="text-sm text-[#555] hover:text-[#4f6a96] transition-colors">
                 {l.label}
               </a>
             ))}
           </nav>
-          <a href="#contacts" className="hidden md:inline-flex items-center gap-2 bg-[#111] text-white text-sm px-5 py-2.5 hover:bg-[#333] transition-colors">
+          <a href="#contacts" className="hidden md:inline-flex items-center gap-2 bg-[#4f6a96] text-white text-sm px-5 py-2.5 hover:bg-[#3d5478] transition-colors">
             Получить предложение
           </a>
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
@@ -99,11 +99,11 @@ export default function Index() {
               Продажа контейнеров 20 и 40 футов. Самовывоз с терминала или доставка по городу.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#catalog" className="inline-flex items-center gap-2 bg-[#111] text-white px-7 py-3.5 text-sm font-medium hover:bg-[#333] transition-colors">
+              <a href="#catalog" className="inline-flex items-center gap-2 bg-[#4f6a96] text-white px-7 py-3.5 text-sm font-medium hover:bg-[#3d5478] transition-colors">
                 Смотреть каталог
                 <Icon name="ArrowRight" size={16} />
               </a>
-              <a href="#contacts" className="inline-flex items-center gap-2 border border-[#111] text-[#111] px-7 py-3.5 text-sm font-medium hover:bg-[#111] hover:text-white transition-colors">
+              <a href="#contacts" className="inline-flex items-center gap-2 border border-[#4f6a96] text-[#4f6a96] px-7 py-3.5 text-sm font-medium hover:bg-[#4f6a96] hover:text-white transition-colors">
                 Получить расчёт
               </a>
             </div>
@@ -132,14 +132,14 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {containers.map((c) => (
-              <div key={c.id} className="group border border-[#e5e5e5] bg-[#f7f7f5] hover:border-[#111] transition-all duration-300">
+              <div key={c.id} className="group border border-[#e5e5e5] bg-[#f7f7f5] hover:border-[#4f6a96] transition-all duration-300">
                 <div className="aspect-[4/3] overflow-hidden bg-[#eee]">
                   <img src={c.img} alt={c.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-bold text-lg">{c.name}</h3>
-                    <span className="text-xs font-black border border-[#111] px-2 py-1 ml-2 shrink-0">{c.size}</span>
+                    <span className="text-xs font-black border border-[#4f6a96] text-[#4f6a96] px-2 py-1 ml-2 shrink-0">{c.size}</span>
                   </div>
                   <p className="text-sm text-[#666] mb-4 leading-relaxed">{c.desc}</p>
                   <div className="text-xs text-[#888] space-y-1 mb-4">
@@ -148,7 +148,7 @@ export default function Index() {
                   </div>
                   <div className="flex items-center justify-between pt-4 border-t border-[#e5e5e5]">
                     <span className="font-bold text-xl">{c.price}</span>
-                    <a href="#contacts" className="text-sm border border-[#111] px-4 py-2 hover:bg-[#111] hover:text-white transition-colors">
+                    <a href="#contacts" className="text-sm border border-[#4f6a96] text-[#4f6a96] px-4 py-2 hover:bg-[#4f6a96] hover:text-white transition-colors">
                       Заказать
                     </a>
                   </div>
@@ -184,7 +184,7 @@ export default function Index() {
                   "Гарантия на все контейнеры",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm text-[#555]">
-                    <span className="w-1.5 h-1.5 bg-[#111] rounded-full shrink-0" />
+                    <span className="w-1.5 h-1.5 bg-[#4f6a96] rounded-full shrink-0" />
                     {item}
                   </div>
                 ))}
@@ -193,7 +193,7 @@ export default function Index() {
 
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-[#111] text-white p-6">
+                <div className="bg-[#4f6a96] text-white p-6">
                   <div className="text-4xl font-black mb-2">2012</div>
                   <div className="text-sm text-[#aaa]">Год основания компании</div>
                 </div>
@@ -208,7 +208,7 @@ export default function Index() {
                   <div className="text-sm text-[#888]">Довольных клиентов</div>
                 </div>
                 <div className="bg-[#f0f0ee] border border-[#e5e5e5] p-6">
-                  <div className="text-4xl font-black mb-2">3</div>
+                  <div className="text-4xl font-black text-[#4f6a96] mb-2">3</div>
                   <div className="text-sm text-[#888]">Терминала в городе</div>
                 </div>
               </div>
@@ -233,8 +233,8 @@ export default function Index() {
                   onClick={() => setActiveWarehouse(w)}
                   className={`w-full text-left p-5 border transition-all duration-200 ${
                     activeWarehouse.id === w.id
-                      ? "border-[#111] bg-[#111] text-white"
-                      : "border-[#e5e5e5] bg-[#f7f7f5] hover:border-[#aaa]"
+                      ? "border-[#4f6a96] bg-[#4f6a96] text-white"
+                      : "border-[#e5e5e5] bg-[#f7f7f5] hover:border-[#4f6a96]"
                   }`}
                 >
                   <div className="flex items-start justify-between">
@@ -270,11 +270,11 @@ export default function Index() {
           <div className="pt-12 border-t border-[#e5e5e5]">
             <h3 className="text-2xl font-black mb-6">Свяжитесь с нами</h3>
             <div className="flex flex-col sm:flex-row gap-6">
-              <a href="tel:+79221987474" className="flex items-center gap-3 bg-[#111] text-white px-6 py-4 hover:bg-[#333] transition-colors">
+              <a href="tel:+79221987474" className="flex items-center gap-3 bg-[#4f6a96] text-white px-6 py-4 hover:bg-[#3d5478] transition-colors">
                 <Icon name="Phone" size={18} />
                 <span className="font-medium">+7 (922) 198 74-74</span>
               </a>
-              <a href="mailto:alanreport@yandex.ru" className="flex items-center gap-3 border border-[#111] text-[#111] px-6 py-4 hover:bg-[#111] hover:text-white transition-colors">
+              <a href="mailto:alanreport@yandex.ru" className="flex items-center gap-3 border border-[#4f6a96] text-[#4f6a96] px-6 py-4 hover:bg-[#4f6a96] hover:text-white transition-colors">
                 <Icon name="Mail" size={18} />
                 <span className="font-medium">alanreport@yandex.ru</span>
               </a>
@@ -289,10 +289,10 @@ export default function Index() {
           <div className="flex items-center">
             <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Лидер-контейнер" className="h-8 w-auto object-contain" />
           </div>
-          <span>© 2024 Лидер-контейнер. Екатеринбург</span>
+          <span className="text-[#888]">© 2024 Лидер-контейнер. Екатеринбург</span>
           <nav className="flex gap-6">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} className="hover:text-[#111] transition-colors">
+              <a key={l.href} href={l.href} className="hover:text-[#4f6a96] transition-colors">
                 {l.label}
               </a>
             ))}
