@@ -55,9 +55,8 @@ export default function Index() {
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#f7f7f5]/95 backdrop-blur-sm border-b border-[#e5e5e5]">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#home" className="text-lg font-bold tracking-tight flex items-center gap-2">
-            <span className="w-7 h-7 bg-[#111] text-white flex items-center justify-center text-xs font-black">ЛК</span>
-            <span>Лидер-контейнер</span>
+          <a href="#home" className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Лидер-контейнер" className="h-10 w-auto object-contain" />
           </a>
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
@@ -287,9 +286,8 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="border-t border-[#e5e5e5] bg-[#f7f7f5]">
         <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#888]">
-          <div className="flex items-center gap-2">
-            <span className="w-6 h-6 bg-[#111] text-white flex items-center justify-center text-xs font-black">ЛК</span>
-            <span className="font-medium text-[#111]">Лидер-контейнер</span>
+          <div className="flex items-center">
+            <img src="https://cdn.poehali.dev/projects/612813ef-1a83-4228-928a-b7c408a798c0/bucket/8772a100-527e-4e61-8055-c13a29f3f6a5.jpeg" alt="Лидер-контейнер" className="h-8 w-auto object-contain" />
           </div>
           <span>© 2024 Лидер-контейнер. Екатеринбург</span>
           <nav className="flex gap-6">
